@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Xml Json WR" Height="500" Width="600">
+        Title="Xml Json WR" Height="500" Width="550">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -14,30 +17,20 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="161*"/>
-
-            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Margin="85,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Height="30" Background="#FF030A0E" Foreground="White"/>
-        <DatePicker Margin="84,200,78,228" RenderTransformOrigin="0.5,0.5" Background="#FF0A2635" >
+        <TextBox Name="namebox" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Height="30" Background="#FF030A0E" Foreground="White"/>
+        <DatePicker Name="datapicker" Margin="196,200,244,228" RenderTransformOrigin="0.5,0.5" Background="#FF0A2635" >
         </DatePicker>
-        <TextBox HorizontalAlignment="Left" Margin="85,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Height="26" Foreground="White" Background="#FF071B26"/>
-        <TextBox HorizontalAlignment="Left" Margin="85,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Height="32" Background="#FF05131A" Foreground="White"/>
-        <Button Content="Read" HorizontalAlignment="Left" Margin="182,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.555,0.603" Height="85" Width="118" BorderBrush="White" Foreground="White">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF337CB5" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <TextBox Name="specialitybox" HorizontalAlignment="Center" Margin="0,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Height="26" Foreground="White" Background="#FF071B26"/>
+        <TextBox Name="surnamebox" HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Height="32" Background="#FF05131A" Foreground="White"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
         <Label Content="Surname" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
         <Label Content="Speciality" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
         <Label Content="Birthday" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
-        <RadioButton Grid.Column="1" Content="Xml" HorizontalAlignment="Left" Margin="44,230,0,0" VerticalAlignment="Top" AutomationProperties.IsOffscreenBehavior="Onscreen" BorderBrush="#FF1DD83A" Background="White" Foreground="White" Width="52"/>
-        <RadioButton Grid.Column="1" Content="Json" HorizontalAlignment="Left" Margin="161,229,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="#FF0010FF" Width="55" Height="17" Background="White" RenderTransformOrigin="-0.2,-2.264"/>
-        <Button Content="Write" HorizontalAlignment="Left" Margin="20,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.555,0.603" Height="85" Width="118" BorderBrush="White" Foreground="White">
+        <RadioButton Name="checkboxxml" Content="Xml" HorizontalAlignment="Left" Margin="172,362,0,0" VerticalAlignment="Top" AutomationProperties.IsOffscreenBehavior="Onscreen" BorderBrush="#FF1DD83A" Background="White" Foreground="White" Width="52" RenderTransformOrigin="0.596,0.537"/>
+        <RadioButton Name="checkboxjson" Content="Json" HorizontalAlignment="Left" Margin="275,362,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="#FF0010FF" Width="55" Height="17" Background="White" RenderTransformOrigin="-0.2,-2.264"/>
+        <Button Content="Write" HorizontalAlignment="Left" Margin="172,276,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.555,0.603" Height="43" Width="158" BorderBrush="White" Foreground="White" Click="Button_Click_1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
